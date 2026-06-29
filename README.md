@@ -8,10 +8,10 @@ End-to-end tests for [gungchaba.online](https://www.gungchaba.online), a multi-p
 - **Navigation** (`navigation.cy.js`) — the header nav links resolve to every main page, the brand link returns home, and each click actually navigates (not just exposes the right `href`).
 - **Booking links** (`booking-links.cy.js`) — bookings happen via WhatsApp, phone, email and Facebook, not a form, so we validate the link metadata: correct WhatsApp / phone numbers, the email's pre-filled subject, the Facebook URL, and `rel="noopener"` on every external link.
 - **Mobile menu** (`mobile-menu.cy.js`) — the hamburger is visible on a mobile viewport and hidden on desktop; clicking it reveals the panel; the mobile menu exposes the same destinations as the header.
-- **Responsive** (`responsive.cy.js`) — the homepage h1 is visible on iPhone SE, iPad 2 and desktop. Includes a set of horizontal-overflow assertions, currently `.skip`-ed pending a CSS adjustment on the site itself.
+- **Responsive** (`responsive.cy.js`) — the homepage h1 is visible on iPhone SE, iPad 2 and desktop, and both `/` and `/about` render without horizontal overflow on every viewport (`document.documentElement.scrollWidth ≤ window.innerWidth`).
 - **Content** (`content.cy.js`) — the three core service cards, the standard service-business sections (Services, Pricing, Testimonials, Visit Our Studio) and the *Passion for Healing* about-preview block are all present, and every image has non-empty alt text.
 
-36 tests in total (30 active, 6 skipped).
+36 tests in total.
 
 ## How to run
 
