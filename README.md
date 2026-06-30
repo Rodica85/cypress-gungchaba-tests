@@ -10,8 +10,10 @@ End-to-end tests for [gungchaba.online](https://www.gungchaba.online), a multi-p
 - **Mobile menu** (`mobile-menu.cy.js`) — the hamburger is visible on a mobile viewport and hidden on desktop; clicking it reveals the panel; the mobile menu exposes the same destinations as the header.
 - **Responsive** (`responsive.cy.js`) — the homepage h1 is visible on iPhone SE, iPad 2 and desktop, and both `/` and `/about` render without horizontal overflow on every viewport (`document.documentElement.scrollWidth ≤ window.innerWidth`).
 - **Content** (`content.cy.js`) — the three core service cards, the standard service-business sections (Services, Pricing, Testimonials, Visit Our Studio) and the *Passion for Healing* about-preview block are all present, and every image has non-empty alt text.
+- **SEO and structured data** (`seo.cy.js`) — `html lang="en"`, meta description that mentions the business / location / service, Open Graph title and description for social sharing, OG type set to `website`, viewport meta for mobile, and JSON-LD `MassageTherapy` schema with the right business name, UK phone number and Abingdon postal address — everything Google needs for a strong local-search result.
+- **Subpage content** (`subpage-content.cy.js`) — each main page (`/about`, `/services`, `/contact`, `/gift-vouchers`) has its own unique h1, topic-specific content (massage types on services, phone link on contact), and keeps the brand name in the document title across the whole site.
 
-36 tests in total.
+49 tests in total.
 
 ## How to run
 
